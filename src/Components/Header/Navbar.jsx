@@ -13,15 +13,35 @@ const Navbar = ({ lightMode, handleToggleThemeMode }) => {
           Portfolio.
         </Link>
         <div className="d-flex align-items-center gap-3">
-          <Link className="text-decoration-none h5" to="/">
+          <Link
+            className="text-decoration-none h5"
+            to="/"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
             Home
           </Link>
 
-          <Link className="text-decoration-none h5" to="/">
+          <Link
+            className="text-decoration-none h5"
+            to="#"
+            onClick={() =>
+              document
+                .getElementById("about_me")
+                .scrollIntoView({ behavior: "smooth" })
+            }
+          >
             About
           </Link>
 
-          <Link className="text-decoration-none h5" to="/">
+          <Link
+            className="text-decoration-none h5"
+            to="#"
+            onClick={() =>
+              document
+                .getElementById("contact")
+                .scrollIntoView({ behavior: "smooth" })
+            }
+          >
             Contact
           </Link>
 
